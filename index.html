@@ -1,0 +1,730 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+
+	<meta charset="utf-8">
+	<style>
+		@import url('https://fonts.googleapis.com/css2?family=Anek+Latin&family=Hind+Siliguri:wght@300&family=Noto+Sans+Mono:wght@200&family=PT+Sans+Narrow&family=Poppins:ital,wght@1,200&family=Press+Start+2P&family=Quicksand:wght@300&family=Russo+One&family=Silkscreen&family=Varela+Round&display=swap');
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Lato', sans-serif;
+}
+html,body{
+	height: 100%;
+	background-color: white;
+}
+.container{
+	max-width: 1200px;
+	width: 100%;
+	background-color: rgba(70, 57, 77, 0.769);
+	height: 1200px;
+	padding-top: 20px;
+	margin: 0 auto;
+
+}
+.titulo{
+	border-radius: 200px;
+	text-align: center;
+	width: 600px;
+	height: 200px;
+	background-color: white;
+	margin: 0px auto;
+	
+	
+}
+.titulo p:first-child {
+	padding-top: 50px;
+}
+.titulo p {
+	padding-top: 18px;
+	font-size: 20px;
+}
+.titulo{
+	font-weight: bold;
+}
+.cont{
+	margin: 40px auto;
+	background-color: #2c2445c9;
+	width: 1100px;
+	height: 900px;
+	padding-top: 20px;
+	padding-left: 10px;
+	padding-right: 10px;
+
+}
+.form{
+	
+	
+	padding-top: 30px;
+	text-align: center;
+	width: 100%;
+	height: 300px;
+	
+}
+.texto{	
+	padding-top: 10px;
+	display: flex;
+}
+.texto p {
+	color: rgb(245, 245, 245);
+	padding-top: 10px;
+	padding-left: 10px;
+	font-weight: bold;
+}
+.texto input{
+	width: 1000px;
+	height: 60px;
+	
+}
+.btns{
+	
+	
+	
+}
+
+.btns input[type=submit]{
+	cursor: pointer;
+	width: 300px;
+	position: relative;
+	border-radius: 100px;
+	height: 60px;
+	margin-top: 10px;
+	height: 60px;
+	font-weight: bold;
+}
+.btns input[type=submit]:hover{
+	transition: 0.1s;
+	background-color: rgb(176, 201, 223);
+}
+.sinlge{
+	
+	display: flex;
+}
+.sinlge:first-child{
+	padding-top: 20px;
+	
+}
+.para-s{
+	text-align: left;
+	display: flex;
+	width: 670px;
+	height: 58px;
+	background-color: white;
+	position: relative;
+	top: 11px;
+	left: 30px;
+	padding-left: 10px;
+	padding-top: 5px;	
+}
+.para-s2{
+	text-align: left;
+	display: flex;
+	width: 670px;
+	height: 70px;
+	background-color: white;
+	position: relative;
+	top: 11px;
+	left: 30px;
+	padding-left: 10px;
+	padding-top: 5px;	
+}
+
+	</style>
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0">
+
+
+
+</head>
+<body>
+
+	<div class="container">
+
+		<div class="titulo">
+			<p>Calculadora de vetores</p>
+			<p>Metodos matemáticos para gestão da informação</p>
+			<p>Autor: JV</p>
+		</div>
+
+		<div class="cont">
+			<div class="form">
+				<form  id="formulario">
+
+					<div class="texto">
+						<input type="text" name="vetor1" id="vetor1">
+						<p>Vetor 1</p>
+						
+					</div>
+
+					<div class="texto">
+						<input type="text" name="vetor2" id="vetor2">
+						<p>Vetor 2</p>
+					</div>
+
+					<div class="texto">
+						<input type="text" name="N" id="N">
+						<p>N</p>
+					</div>
+
+
+
+
+
+
+					
+						<div class="btns">
+
+							<div class="sinlge">
+								<input type="submit" id="btMais" value="Vetor 1 (+) Vetor 2">
+								<div class="para-s">
+									<p class="somaP"></p>
+								</div>
+							</div>
+
+							<div class="sinlge">
+								<input type="submit" id="btMenos" value="Vetor 1 (-) Vetor 2">
+								<div class="para-s">
+									<p class="sub"></p>
+								</div>
+							</div>
+
+							<div class="sinlge">
+								<input type="submit" id="btVezes" value="Vetor1 x N e Vetor2 x N">
+								<div class="para-s">
+									<p class="vezes"></p>
+								</div>
+							</div>
+						
+							<div class="sinlge">
+								<input type="submit" id="btDivi" value="Vetor1 ÷ N e Vetor2 ÷ N">
+								<div class="para-s">
+									<p class="divi"></p>
+								</div>
+							</div>
+
+
+
+
+							<div class="sinlge">
+								<input type="submit" id="bt0" value="Calcular produto interno vetor 1, vetor 2>">
+								<div class="para-s">
+									<p class="PI"></p>
+								</div>
+							</div>
+
+
+							<div class="sinlge">
+								<input type="submit" id="bt-produtointernoiv" value="Calcular produto interno vetor 1 e vetor 2">
+								<div class="para-s">
+									<p class="PI2"></p>
+								</div>
+							</div>
+
+							<div class="sinlge">
+								<input type="submit" id="bt-norma" value="Calcular norma vetor 1 e vetor 2">
+								<div class="para-s">
+									<p class="norma"></p>
+									
+								</div>
+							</div>
+
+							<div class="sinlge">	
+							<input type="submit" id="bt-normaliza" value="Calcular normalização vetor 1 e vetor 2	">
+							<div class="para-s2">
+								<p class="normaliza"></p>
+							</div>
+							</div>
+
+						</div>
+				</form>
+			</div>
+		</div>
+
+	</div>
+
+<script>
+
+	
+
+
+class Calc{
+       
+		#arr
+		#resultado
+		#norma
+		#normalizacao
+
+        constructor(arr, resultado, norma, normalizacao) {
+        this.arr = arr;
+		this.resultado = resultado;
+		this.norma = norma;
+		this.normalizacao = normalizacao;
+        }
+
+       
+		
+		get arr(){
+			return this.#arr;
+		}
+
+		get Sresultado() {
+            return this.#resultado;
+        }
+
+		get norma() {
+            return this.#norma;
+        }
+
+		get normalizacao() {
+            return this.#normalizacao;
+        }
+
+
+
+
+		
+       
+		set arr(valor) {
+            this.#arr = valor; 
+        }
+
+		set Sresultado(valor) {
+            this.#resultado = valor; 
+        }
+		set norma(valor) {
+            this.#norma = valor; 
+        }
+		set normalizacao(valor) {
+            this.#normalizacao = valor; 
+        }
+		
+
+
+
+
+
+        get ProdutoInterno(){
+            return this.resultado;
+        }
+       
+        get bNorma(){
+            return ;
+        }
+        get normalizacao(){
+            
+        }
+}
+
+
+
+
+
+
+
+
+
+
+//vetor 1, vetor 2
+const obj0 = new Calc();
+
+const obj = new Calc();
+const obj2 = new Calc();
+
+
+const btnMais = document.querySelector("#btMais");
+btnMais.addEventListener("click", function (e) {
+
+e.preventDefault();
+
+const inputvetor1 = document.querySelector('#vetor1');
+const inputvetor2 = document.querySelector('#vetor2');
+
+
+const vet1 = inputvetor1.value;
+const vet2 = inputvetor2.value;
+
+const nvet1 = vet1.split(",");
+const nvet2 = vet2.split(",");
+
+console.log(nvet1);
+console.log(nvet2);
+
+// subtracao
+let s = 0;
+const nova = [];
+let  resultado = 0;
+
+for(let i = 0; i < nvet1.length; i++){
+     s =  Number(nvet1[i]) + Number(nvet2[i])
+     nova.push(s);
+}
+
+
+const somaP = document.querySelector(".somaP");
+somaP.innerHTML = `Soma vetor1 + vetor2:  [${nova}]`;
+
+});
+
+
+
+
+const btnMenos = document.querySelector("#btMenos");
+btnMenos.addEventListener("click", function (e) {
+
+e.preventDefault();
+
+const inputvetor1 = document.querySelector('#vetor1');
+const inputvetor2 = document.querySelector('#vetor2');
+
+
+const vet1 = inputvetor1.value;
+const vet2 = inputvetor2.value;
+
+const nvet1 = vet1.split(",");
+const nvet2 = vet2.split(",");
+
+console.log(nvet1);
+console.log(nvet2);
+
+// soma
+let s = 0;
+const nova = [];
+let  resultado = 0;
+
+for(let i = 0; i < nvet1.length; i++){
+     s =  Number(nvet1[i]) - Number(nvet2[i])
+     nova.push(s);
+}
+
+const somaP = document.querySelector(".sub");
+somaP.innerHTML = `Subtração de vetor1 - vetor2: [${nova}]`;
+
+
+});
+
+
+
+
+
+
+const btnVezes = document.querySelector("#btVezes");
+btnVezes.addEventListener("click", function (e) {
+
+e.preventDefault();
+
+const inputvetor1 = document.querySelector('#vetor1');
+const inputvetor2 = document.querySelector('#vetor2');
+const N = document.querySelector('#N');
+
+const vet1 = inputvetor1.value;
+const vet2 = inputvetor2.value;
+const Nn = N.value;
+
+const nvet1 = vet1.split(",");
+const nvet2 = vet2.split(",");
+
+
+console.log(nvet1);
+console.log(nvet2);
+console.log(Nn);
+
+// vezes
+let s = 0;
+const nova = [];
+let  resultado = 0;
+
+for(let i = 0; i < nvet1.length; i++){
+     s =  Number(nvet1[i]) * Nn;
+     nova.push(s);
+}
+let s2 = 0;
+const nova2 = [];
+let  resultado2 = 0;
+
+for(let i = 0; i < nvet2.length; i++){
+     s2 =  Number(nvet2[i]) * Nn;
+     nova2.push(s2);
+}
+
+const somaP = document.querySelector(".vezes");
+somaP.innerHTML = `Multiplicação de vetor 1 por: ${Nn} = [${nova}] e Multiplicação de vetor 2 por: ${Nn} = [${nova2}]`;
+
+
+});
+
+
+
+//divisao
+const btnDivi = document.querySelector("#btDivi");
+btnDivi.addEventListener("click", function (e) {
+
+e.preventDefault();
+
+const inputvetor1 = document.querySelector('#vetor1');
+const inputvetor2 = document.querySelector('#vetor2');
+const N = document.querySelector('#N');
+
+const vet1 = inputvetor1.value;
+const vet2 = inputvetor2.value;
+const Nn = N.value;
+
+const nvet1 = vet1.split(",");
+const nvet2 = vet2.split(",");
+
+console.log(nvet1);
+console.log(nvet2);
+
+
+let s = 0;
+const nova = [];
+let  resultado = 0;
+
+for(let i = 0; i < nvet1.length; i++){
+     s =  Number(nvet1[i]) / Nn;
+     nova.push(s);
+}
+let s2 = 0;
+const nova2 = [];
+let  resultado2 = 0;
+
+for(let i = 0; i < nvet2.length; i++){
+     s2 =  Number(nvet2[i]) / Nn;
+     nova2.push(s2);
+}
+const somaP = document.querySelector(".divi");
+somaP.innerHTML = `Divisão de vetor 1 por: ${Nn} = [${nova}] e Divisão de vetor 2 por: ${Nn} = [${nova2}]`;
+
+
+
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+const btn0 = document.querySelector("#bt0");
+btn0.addEventListener("click", function (e) {
+
+e.preventDefault();
+
+const inputvetor1 = document.querySelector('#vetor1');
+const inputvetor2 = document.querySelector('#vetor2');
+
+
+const vet1 = inputvetor1.value;
+const vet2 = inputvetor2.value;
+
+const nvet1 = vet1.split(",");
+const nvet2 = vet2.split(",");
+
+console.log(nvet1);
+console.log(nvet2);
+
+
+
+// Produto interno
+
+let s = 0;
+let u = 0;
+const nova = [];
+const nova2 = [];
+let  resultado = 0;
+let  resultado2 = 0;
+
+for(let i = 0; i < nvet1.length; i++){
+     s =  Number(nvet1[i]) * Number(nvet2[i])
+     nova.push(s);
+}
+for(let i = 0; i < nova.length; i++){
+   resultado = resultado + nova[i];
+    
+}
+obj0.Sresultado = resultado;
+
+
+
+const norma = Math.sqrt(obj0.Sresultado) ;
+obj0.norma = norma;
+
+
+const somaP = document.querySelector(".PI");
+somaP.innerHTML = `Produto interno	<vetor1, vetor2>: ${obj0.Sresultado} e norma = ${obj0.norma} ou √${obj0.Sresultado}`;
+
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Produto interno dos vetores individuais
+const btn = document.querySelector("#bt-produtointernoiv");
+btn.addEventListener("click", function (e) {
+
+e.preventDefault();
+
+const inputvetor1 = document.querySelector('#vetor1');
+const inputvetor2 = document.querySelector('#vetor2');
+
+
+const vet1 = inputvetor1.value;
+const vet2 = inputvetor2.value;
+
+const nvet1 = vet1.split(",");
+const nvet2 = vet2.split(",");
+
+console.log(nvet1);
+console.log(nvet2);
+
+console.log(inputvetor1.value);
+console.log(inputvetor2.value);
+
+
+// Produto interno
+
+let s = 0;
+let u = 0;
+const nova = [];
+const nova2 = [];
+let  resultado = 0;
+let  resultado2 = 0;
+
+
+//vetor1
+for(let i = 0; i < nvet1.length; i++){
+     s = Number(nvet1[i]);
+     s = s ** 2;
+     nova.push(s);
+}
+for(let i = 0; i < nova.length; i++){
+   resultado = resultado + nova[i];
+    
+}
+
+//vetor2
+for(let i = 0; i < nvet2.length; i++){
+     u = Number(nvet2[i]);
+     u = u ** 2;
+     nova2.push(u);
+}
+for(let i = 0; i < nova2.length; i++){
+   resultado2 = resultado2 + nova2[i];
+    
+}
+
+obj.Sresultado = resultado;
+obj2.Sresultado = resultado2;
+const somaP = document.querySelector(".PI2");
+somaP.innerHTML = `Produto interno vetor1 = ${obj.Sresultado} e Produto interno vetor2 = ${obj2.Sresultado} `;
+
+});
+
+
+
+
+
+
+const btn2 = document.querySelector("#bt-norma");
+btn2.addEventListener("click", function (e) {
+
+e.preventDefault();
+
+//Normaa
+
+const norma = Math.sqrt(obj.Sresultado) ;
+obj.norma = norma.toFixed(4) ;
+
+const norma2 = Math.sqrt(obj2.Sresultado) ;
+obj2.norma = norma2.toFixed(4) ;
+
+const somaP = document.querySelector(".norma");
+somaP.innerHTML = `Norma vetor1 = ${obj.norma} e Norma vetor2 = ${obj2.norma} `;
+
+
+
+});
+
+
+
+
+
+
+const btn3 = document.querySelector("#bt-normaliza");
+btn3.addEventListener("click", function (e) {
+
+e.preventDefault();
+
+const inputvetor1 = document.querySelector('#vetor1');
+const inputvetor2 = document.querySelector('#vetor2');
+
+
+const vet1 = inputvetor1.value;
+const vet2 = inputvetor2.value;
+
+const nvet1 = vet1.split(",");
+const nvet2 = vet2.split(",");
+
+
+
+//Normalização
+
+const z = [];
+let d = 0;
+
+for(let i = 0; i < nvet1.length; i++){
+    d = nvet1[i]/obj.norma;
+	q = d.toFixed(4);
+    z.push(q);
+}
+const r = [];
+let a = 0;
+
+for(let i = 0; i < nvet2.length; i++){
+    a = nvet2[i]/obj2.norma;
+	f = a.toFixed(4);
+    r.push(f);
+}
+const somaP = document.querySelector(".normaliza");
+somaP.innerHTML = `Normalização vetor 1= [${z}] e Normalização vetor2 = [${r}] `;
+});
+
+	
+
+</script>
+
+</body>
+</html>
